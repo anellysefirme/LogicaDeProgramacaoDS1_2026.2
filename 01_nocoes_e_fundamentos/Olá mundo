@@ -1,2 +1,9 @@
-print("olá mundo")
-print("Anellyse")
+print ("olá mundo.py")
+print ("Anellyse")
+nome=input("receba nome")
+dia=input("receba dia")
+mês=("receba mês")
+ano=input("receba ano")
+
+
+print(f"meu nome é Anellyse{nome}") print(f"nasci dia 22{dia}") print(f"nasci no mês de outubro{mês}") print(f"nasci no ano de 2010{ano}")
