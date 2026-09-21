@@ -13,6 +13,6 @@ Crie um programa que:
 valor_consumido=250.00
 taxa_servico= valor_consumido * 0.10
 valor_final= valor_consumido + taxa_servico
-print (f"valor consumido: R$ {valor_consumido:.f2}")
-print (f"taxa de serviço (10%): R$ {taxa_servico:.2f}")
-print (f"valor final: R$ {valor_final:.2f}")
+print (f"valor consumido: R$ {valor_consumido:float.f2}")
+print (f"taxa de serviço (10%): R$ {taxa_servico:float.2f}")
+print (f"valor final: R$ {valor_final:float.2f}")
