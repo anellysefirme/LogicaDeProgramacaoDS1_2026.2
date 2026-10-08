@@ -10,5 +10,6 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.clearPreviousOutput": true,
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  "chat.disableAIFeatures": false
 }

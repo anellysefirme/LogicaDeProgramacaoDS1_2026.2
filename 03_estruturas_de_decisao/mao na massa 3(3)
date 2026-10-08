@@ -1,0 +1,26 @@
+# TODO: Implemente o menu utilizando match-case ou elif
+from xml.dom.minidom import _ElementChildrenPlusFragment
+
+
+opcao = int(input("Digite a opção desejada (1, 2 ou 3): "))
+
+# Desenvolva a estrutura de seleção aqui
+opcao = int(input( "digite a opcao desejada (1 , 2 ou 3 : "))
+match opcao:
+    case 1:
+        print ("consultar livro")
+    case 2:
+        print ("realizar emprestimo")
+    case 3:
+        print ("devolver livro")
+    case _:
+        print("opcao nao encontrada")
+
+if opcao == 1:
+    print("consoltar livro")
+elif opcao == 2:
+    print ("realizar emprestimo")
+elif opcao == 3:
+    print ("devolver livro")
+else:
+    print ("opcao nao encontrada")
