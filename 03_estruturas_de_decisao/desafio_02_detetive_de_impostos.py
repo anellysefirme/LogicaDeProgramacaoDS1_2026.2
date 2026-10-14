@@ -21,3 +21,17 @@ SUA MISSÃO:
 #     taxa = faturamento * 0.15
 
 # TODO: Escreva aqui a versão corrigida:
+# CÓDIGO CORRIGIDO (Estrutura decrescente)
+faturamento = float(input("Informe o faturamento anual: "))
+
+if faturamento > 100000:
+    taxa = faturamento * 0.15
+elif faturamento > 50000:
+    taxa = faturamento * 0.10
+elif faturamento > 0:
+    taxa = faturamento * 0.05
+else:
+    taxa = 0.0
+    print("Faturamento inválido ou isento.")
+
+print(f"O valor da taxa comercial é: R$ {taxa:.2f}")
