@@ -1,0 +1,14 @@
+# Definição da função calcular_media
+def calcular_media(nota1, nota2, nota3):
+    # Calcula a soma das três notas e divide por 3
+    media = (nota1 + nota2 + nota3) / 3
+    return media
+
+# Teste com notas de exemplo
+# Exemplo 1: Notas de um aluno aprovado
+n1, n2, n3 = 8.5, 7.0, 9.0
+resultado1 = calcular_media(n1, n2, n3)
+print(f"A média das notas {n1}, {n2} e {n3} é: {resultado1:.2f}")
+
+# Exemplo 2: Notas redondas
+print(f"A média das notas 6, 7 e 8 é: {calcular_media(6, 7, 8):.2f}")
