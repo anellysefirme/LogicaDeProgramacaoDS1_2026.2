@@ -1,14 +1,5 @@
-Crie um programa que solicite um número inteiro ao usuário e imprima a tabuada de multiplicação desse número de 1 até 10 usando o laço for.
-
-
-# TODO: Implemente a tabuada aqui
 numero = int(input("Digite um número para ver a tabuada: "))
 
-# Escreva o laço for
-# Solicita o número inteiro ao usuário
-numero = int(input("Digite um número para ver a tabuada: "))
-
-# Laço for de 1 até 10
 for i in range(1, 11):
     print(f"{numero} x {i} = {numero * i}")
 

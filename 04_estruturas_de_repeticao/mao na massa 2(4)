@@ -1,0 +1,22 @@
+Escreva um programa com laço while que leia números inteiros digitados pelo usuário até que ele digite o número 0 (flag de parada). Ao final, o programa deve exibir a soma de todos os números digitados. # type: ignore
+
+
+# TODO: Desenvolva o acumulador com parada no 0
+soma = 0
+
+# Escreva a estrutura de repetição while
+# Desenvolva o acumulador com parada no 0
+soma = 0
+
+# Escreva a estrutura de repetição while
+while True:
+    numero = int(input("Digite um número inteiro (ou 0 para sair): "))
+    
+    # Condição de parada (flag)
+    if numero == 0:
+        break
+        
+    soma += numero
+
+# Exibe o resultado final
+print(f"A soma de todos os números digitados é: {soma}")
