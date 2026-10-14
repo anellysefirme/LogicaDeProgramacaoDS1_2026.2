@@ -18,7 +18,7 @@ Calcule e mostre o total a pagar.
 codigo = int(input("digite o codigo do item: "))
 quantidade = int(input("digite a quantidade: "))
 if codigo == 1:
-    total = quantidade * 4.00
+    total = quantidade * 4.00 
 elif codigo == 2:
     total = quantidade * 4.50
 elif codigo == 3:
@@ -30,4 +30,7 @@ elif codigo == 5:
     print(f"Total: R$ {total:.2f}")
 else:
     print("Código inválido!")
+    total = 0
     print(f"Total: R$ {total:.2f}")
+
+    print(f"Total: R$ {total: .2f}")
