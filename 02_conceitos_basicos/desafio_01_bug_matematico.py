@@ -20,3 +20,14 @@ SUA MISSÃO:
 # print("A média do aluno é:", media)
 
 # TODO: Escreva aqui o código corrigido:
+# CÓDIGO CORRIGIDO
+
+# 1. Entrada de dados com a conversão de tipo (casting) para float
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+
+# 2. Cálculo da média corrigindo a precedência com parênteses
+media = (nota1 + nota2) / 2
+
+# 3. Exibição da média formatada com 1 casa decimal (.1f)
+print(f"A média do aluno é: {media:.1f}")
