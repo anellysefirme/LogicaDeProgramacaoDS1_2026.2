@@ -1,0 +1,20 @@
+def calcular_frete(distancia, tipo_cliente):
+    # R$ 0.50 por km rodado
+    valor = distancia * 0.50
+    
+    # Taxa adicional se maior que 100km
+    if distancia > 100:
+        valor += 15.00
+        
+    # Desconto VIP
+    if tipo_cliente.upper() == "VIP":
+        valor *= 0.80 # 20% de desconto
+        
+    return valor
+
+# Programa Principal
+distancia = float(input("Digite a distância em km: "))
+tipo = input("Digite o tipo de cliente (Padrão/VIP): ")
+
+frete_final = calcular_frete(distancia, tipo)
+print(f"O valor final do frete é: R$ {frete_final:.2f}")

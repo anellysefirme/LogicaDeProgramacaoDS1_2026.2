@@ -1,4 +1,4 @@
-Escreva uma função lambda chamada calcular_acrescimo que receba um valor numérico e retorne esse valor com 10% de acréscimo.
+Escreva uma função lambda chamada calcular_acrescimo que receba um valor numérico e retorne esse valor com 10% de acréscimo. # type: ignore
 
 
 # TODO: Crie a função lambda aqui
