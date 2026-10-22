@@ -1,0 +1,28 @@
+def tarifa_diurna(distancia):
+    return 4.00 + (distancia * 2.50)
+
+def tarifa_noturna(distancia):
+    return 6.00 + (distancia * 3.20)
+
+# Programa Principal
+caixa_motorista = 0.0
+
+while True:
+    dist = float(input("Distância da corrida em km (ou negativa para fechar o turno): "))
+    if dist < 0:
+        break
+        
+    periodo = input("A corrida foi Diurna (D) ou Noturna (N)? ").upper()
+    
+    if periodo == 'D':
+        valor_corrida = tarifa_diurna(dist)
+        caixa_motorista += valor_corrida
+        print(f"Valor da corrida: R$ {valor_corrida:.2f}")
+    elif periodo == 'N':
+        valor_corrida = tarifa_noturna(dist)
+        caixa_motorista += valor_corrida
+        print(f"Valor da corrida: R$ {valor_corrida:.2f}")
+    else:
+        print("Período inválido! Corrida não contabilizada.")
+
+print(f"\nTurno encerrado. Total arrecadado no caixa: R$ {caixa_motorista:.2f}")
