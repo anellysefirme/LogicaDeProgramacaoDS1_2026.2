@@ -1,0 +1,59 @@
+def processar_saque(saldo_atual, valor_desejado):
+    if valor_desejado > saldo_atual:
+        print("Erro: Saldo insuficiente.")
+        return False
+    if valor_desejado % 10 != 0:
+        print("Erro: O caixa só aceita saques múltiplos de R$ 10.")
+        return False
+    return True
+
+# Programa Principal
+saldo = 0.0
+
+while True:
+    print("\n--- CAIXA ELETRÔNICO ---")
+    print("1 - Depositar")
+    print("2 - Sacar")
+    print("3 - Consultar Saldo")
+    print("4 - Sair")
+    opcao = int(input("Escolha uma opção: "))
+    
+    if opcao == 1:
+        deposito = float(input("Valor do depósito: R$ "))
+        if deposito > 0:
+            saldo += deposito
+            print("Depósito realizado com sucesso!")
+        else:
+            print("Valor inválido.")
+            
+    elif opcao == 2:
+        saque = int(input("Valor do saque (múltiplos de 10): R$ "))
+        
+        if processar_saque(saldo, saque):
+            saldo -= saque
+            print("Saque aprovado! Retire as notas:")
+            
+            # Lógica para distribuição de cédulas
+            notas_50 = saque // 50
+            saque = saque % 50
+            
+            notas_20 = saque // 20
+            saque = saque % 20
+            
+            notas_10 = saque // 10
+            
+            if notas_50 > 0:
+                print(f"-> {notas_50} nota(s) de R$ 50")
+            if notas_20 > 0:
+                print(f"-> {notas_20} nota(s) de R$ 20")
+            if notas_10 > 0:
+                print(f"-> {notas_10} nota(s) de R$ 10")
+                
+    elif opcao == 3:
+        print(f"Seu saldo atual é: R$ {saldo:.2f}")
+        
+    elif opcao == 4:
+        print("Encerrando sistema... Obrigado!")
+        break
+    else:
+        print("Opção inválida.")
