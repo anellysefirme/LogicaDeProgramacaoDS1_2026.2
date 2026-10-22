@@ -1,0 +1,19 @@
+def calcular_juros(valor_inicial, taxa_mensal, meses):
+    saldo = valor_inicial
+    meta_atingida = False
+    
+    for mes in range(1, meses + 1):
+        saldo += saldo * (taxa_mensal / 100)
+        print(f"Mês {mes}: Saldo = R$ {saldo:.2f}")
+        
+        if saldo >= valor_inicial * 2:
+            print("Meta Atingida antecipadamente!")
+            meta_atingida = True
+            break
+            
+# Programa Principal
+v_inicial = float(input("Valor inicial: R$ "))
+taxa = float(input("Taxa de juros mensal (%): "))
+n_meses = int(input("Número de meses: "))
+
+calcular_juros(v_inicial, taxa, n_meses)
