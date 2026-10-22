@@ -1,0 +1,21 @@
+soma_temperaturas = 0.0
+quantidade_leituras = 0
+contagem_perigo = 0
+
+while True:
+    temp = float(input("Digite a temperatura (ou -99 para parar): "))
+    if temp == -99:
+        break
+        
+    soma_temperaturas += temp
+    quantidade_leituras += 1
+    
+    if temp > 35:
+        contagem_perigo += 1
+
+if quantidade_leituras > 0:
+    media = soma_temperaturas / quantidade_leituras
+    print(f"Temperatura média do período: {media:.2f}°C")
+    print(f"Vezes em que ultrapassou a marca de perigo (>35°C): {contagem_perigo}")
+else:
+    print("Nenhuma leitura de temperatura foi registrada.")
