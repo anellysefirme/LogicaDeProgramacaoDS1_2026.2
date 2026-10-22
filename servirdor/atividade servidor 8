@@ -1,0 +1,19 @@
+total_bruto = 0.0
+
+while True:
+    preco = float(input("Preço do item (ou negativo para encerrar): "))
+    if preco < 0:
+        break
+    qnt = int(input("Quantidade do item: "))
+    
+    total_bruto += (preco * qnt)
+
+desconto = 0.0
+if total_bruto > 200.00:
+    desconto = total_bruto * 0.10
+
+total_a_pagar = total_bruto - desconto
+
+print(f"\nValor Bruto: R$ {total_bruto:.2f}")
+print(f"Desconto aplicado: R$ {desconto:.2f}")
+print(f"Valor Final a pagar: R$ {total_a_pagar:.2f}")
