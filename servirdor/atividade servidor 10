@@ -1,0 +1,52 @@
+def calcular_inss(salario_bruto):
+    if salario_bruto <= 2000.00:
+        return salario_bruto * 0.08
+    elif salario_bruto <= 4000.00:
+        return salario_bruto * 0.10
+    else:
+        return 500.00  # Teto fixo
+
+def calcular_irrf(salario_base):
+    if salario_base <= 2500.00:
+        return 0.0
+    elif salario_base <= 5000.00:
+        return (salario_base - 2500.00) * 0.15
+    else:
+        return (salario_base - 2500.00) * 0.275
+
+# Programa Principal
+total_liquido_empresa = 0.0
+total_impostos_empresa = 0.0
+maior_salario_liquido = 0.0
+primeiro_funcionario = True
+
+while True:
+    s_bruto = float(input("Digite o salário bruto do funcionário (0 para parar): R$ "))
+    if s_bruto == 0:
+        break
+        
+    desconto_inss = calcular_inss(s_bruto)
+    s_base = s_bruto - desconto_inss
+    desconto_irrf = calcular_irrf(s_base)
+    
+    s_liquido = s_base - desconto_irrf
+    imposto_total_funcionario = desconto_inss + desconto_irrf
+    
+    # Acumuladores globais
+    total_liquido_empresa += s_liquido
+    total_impostos_empresa += imposto_total_funcionario
+    
+    # Definição do maior salário líquido
+    if primeiro_funcionario:
+        maior_salario_liquido = s_liquido
+        primeiro_funcionario = False
+    else:
+        if s_liquido > maior_salario_liquido:
+            maior_salario_liquido = s_liquido
+            
+    print(f"Salário Líquido deste funcionário: R$ {s_liquido:.2f}\n")
+
+print("\n=== RELATÓRIO DA FOLHA DE PAGAMENTO ===")
+print(f"Total acumulado pago em salários líquidos: R$ {total_liquido_empresa:.2f}")
+print(f"Total arrecadado em impostos (INSS + IRRF): R$ {total_impostos_empresa:.2f}")
+print(f"Maior salário líquido pago na empresa: R$ {maior_salario_liquido:.2f}")
