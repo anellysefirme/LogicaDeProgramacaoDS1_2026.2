@@ -1,0 +1,21 @@
+n_pecas = int(input("Quantas peças serão pesadas? "))
+
+peso_maior = 0.0
+peso_menor = 0.0
+
+for i in range(n_pecas):
+    peso = float(input(f"Digite o peso da peça {i+1}: "))
+    
+    # Inicializa as variáveis na primeira repetição
+    if i == 0:
+        peso_maior = peso
+        peso_menor = peso
+    else:
+        if peso > peso_maior:
+            peso_maior = peso
+        if peso < peso_menor:
+            peso_menor = peso
+
+if n_pecas > 0:
+    print(f"Peça mais pesada: {peso_maior:.2f}")
+    print(f"Peça mais leve: {peso_menor:.2f}")
