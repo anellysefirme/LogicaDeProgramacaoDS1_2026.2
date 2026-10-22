@@ -1,0 +1,29 @@
+def obter_classificacao_imc(peso, altura):
+    imc = peso / (altura ** 2)
+    if imc < 18.5:
+        return "Abaixo do peso"
+    elif imc < 25.0:
+        return "Normal"
+    elif imc < 30.0:
+        return "Sobrepeso"
+    else:
+        return "Obesidade"
+
+# Programa Principal
+atletas_normais = 0
+
+while True:
+    nome = input("Nome do atleta (ou 'FIM' para encerrar): ")
+    if nome.upper() == "FIM":
+        break
+        
+    p = float(input(f"Peso de {nome} (kg): "))
+    a = float(input(f"Altura de {nome} (m): "))
+    
+    classe = obter_classificacao_imc(p, a)
+    print(f"Classificação: {classe}")
+    
+    if classe == "Normal":
+        atletas_normais += 1
+
+print(f"\nTotal de atletas na categoria 'Normal': {atletas_normais}")
