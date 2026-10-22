@@ -1,0 +1,32 @@
+votos_ana = 0
+votos_joao = 0
+votos_maria = 0
+
+while True:
+    voto = int(input("Digite seu voto (1-Ana, 2-João, 3-Maria, 0-Encerrar): "))
+    
+    if voto == 0:
+        break
+    elif voto == 1:
+        votos_ana += 1
+    elif voto == 2:
+        votos_joao += 1
+    elif voto == 3:
+        votos_maria += 1
+    else:
+        print("Voto inválido! Tente novamente.")
+
+print("\n--- Resultado da Votação ---")
+print(f"Ana: {votos_ana} voto(s)")
+print(f"João: {votos_joao} voto(s)")
+print(f"Maria: {votos_maria} voto(s)")
+
+# Determinação do vencedor
+if votos_ana > votos_joao and votos_ana > votos_maria:
+    print("Vencedor(a): Ana")
+elif votos_joao > votos_ana and votos_joao > votos_maria:
+    print("Vencedor(a): João")
+elif votos_maria > votos_ana and votos_maria > votos_joao:
+    print("Vencedor(a): Maria")
+else:
+    print("Houve um empate!")
