@@ -9,7 +9,7 @@ Crie um programa que:
 3. Exiba o valor final da conta a pagar com mensagem formatada.
 """
 # TODO: Desenvolva o algoritmo abaixo:
-valor_consumido= float(input("digite o valor total consumido no restaurante (200.0 R$): "))
+valor_consumido= float(input("digite o valor total consumido no restaurante (R$): "))
 taxa_servico= valor_consumido * 0.10
 valor_final= valor_consumido + taxa_servico
 print(f"valor final da conta a pagar: 200.0:R$ {valor_final:.2f}")

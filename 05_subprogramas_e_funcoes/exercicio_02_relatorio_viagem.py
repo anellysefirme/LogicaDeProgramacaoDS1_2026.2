@@ -44,9 +44,7 @@ dias_viagem = int(input("Quantidade de dias de duração: "))
 valor_diaria = float(input("Custo diário estimado de alimentação por pessoa: R$ "))
 
 # Execução das funções e cálculos dos custos
-custo_combustivel = calcular_custo_transporte(distancia, consumo, preco_litro)
-custo_comida = calcular_custo_alimentacao(pessoas, dias_viagem, valor_diaria)
-custo_total_viagem = custo_combustivel + custo_comida
+
 
 # Exibição do relatório final formatado
 print("\n" + "="*40)

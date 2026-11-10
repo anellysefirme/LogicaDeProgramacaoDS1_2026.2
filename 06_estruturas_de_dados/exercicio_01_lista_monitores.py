@@ -10,3 +10,15 @@ ENUNCIADO:
 """
 
 # TODO: Desenvolva o algoritmo abaixo:
+# 1. Criando uma lista com o primeiro monitor
+monitores = ["Ryan Mesquita Damasceno"]
+
+# 2. Adicionando dois novos monitores
+monitores.append("João Pedro")
+monitores.append("Maria Clara")
+
+# 3. Alterando o nome na posição 0
+monitores[0] = "Ryan Mesquita"
+
+# 4. Imprimindo a lista final
+print("Lista final de monitores:", monitores)
